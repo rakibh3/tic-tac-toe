@@ -6,7 +6,7 @@ function Square({ value, onSquareClick }) {
     <>
       <button
         onClick={onSquareClick}
-        className="bg-white border border-gray-400 h-12 w-12 m-1 leading-9 text-lg"
+        className="bg-white border border-gray-400 h-12 w-12 m-1 leading-9 text-lg font-bold rounded-full shadow-md hover:shadow-lg focus:outline-none focus:shadow-outline"
       >
         {value}
       </button>
