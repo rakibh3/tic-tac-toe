@@ -46,14 +46,6 @@ export default function Board() {
     return null;
   }
 
-  function renderSquare(i) {
-    return (
-      <>
-        <Square value={squares[i]} onSquareClick={() => handleClick(i)} />
-      </>
-    );
-  }
-
   function handleClick(i) {
     if (squares[i]) {
       return;
