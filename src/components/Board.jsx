@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   return (
@@ -18,20 +18,6 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
-  function handleClick(i) {
-    if (squares[i]) {
-      return;
-    }
-    const nextSquares = squares.slice();
-
-    if (xIsNext) {
-      nextSquares[i] = "X";
-    } else {
-      nextSquares[i] = "O";
-    }
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
-  }
   return (
     <>
       <div className="flex">
