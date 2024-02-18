@@ -18,6 +18,16 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
+  const handleClick = (i) => {
+    const newSquares = squares.slice();
+    if (newSquares[i] || !xIsNext) {
+      return;
+    }
+    newSquares[i] = 'X';
+    setSquares(newSquares);
+    setXIsNext(false);
+  };
+
   return (
     <>
       <div className="flex">
